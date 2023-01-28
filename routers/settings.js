@@ -3,10 +3,6 @@ const router = express.Router();
 const controller = require("../controllers/settings");
 const authMiddleware = require("../middleware/auth");
 const { check } = require("express-validator");
-const multer = require('multer')
-const upload = multer({
-  dest: "../uploads/"
-})
 
 router.get("/", authMiddleware, controller.getSettings);
 router.patch(
