@@ -1,5 +1,5 @@
-const Router = require("Express");
-const router = new Router();
+const express = require("express");
+const router = express.Router();
 const controller = require('../controllers/post-comments')
 const authMiddleware = require("../middleware/auth");
 router.post('/:postId', authMiddleware, controller.addComment)
