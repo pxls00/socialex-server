@@ -1,9 +1,3 @@
-// dotenv
-require('dotenv').config({path: './.env'})
-
-// app config
-const config = require('./lib/config')
-
 // express
 const express = require('express')
 
@@ -47,9 +41,9 @@ app.use(express.json())
 
 // start express server and mongoose database
 try {
-    mongoose.connect(config.mongoUri).then(() => {console.log('MongoDb has been connected')})
-    app.listen(config.port, () => {
-        console.log(`Server has been started on port:${config.port}`)
+    mongoose.connect("mongodb+srv://Abdurahim:abu.2006@cluster0.bphmlsu.mongodb.net/socialex?retryWrites=true&w=majority").then(() => {console.log('MongoDb has been connected')})
+    app.listen(80, () => {
+        console.log(`Server has been started on port:${80}`)
     })
 } catch (e) {
     console.error(e)
