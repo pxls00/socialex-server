@@ -4,7 +4,6 @@ const Posts = require("../models/Posts");
 const {
     deleteComment
 } = require("../helpers/comment");
-const request = require("request");
 // const bcrypt = require("bcryptjs");
 
 function iterationComments(comment, userId, credentials) {
