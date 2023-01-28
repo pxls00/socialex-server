@@ -1,5 +1,5 @@
 // dotenv
-require('dotenv').config()
+require('dotenv').config({path: './.env'})
 
 // app config
 const config = require('./lib/config')
