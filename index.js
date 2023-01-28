@@ -42,8 +42,8 @@ app.use(express.json())
 // start express server and mongoose database
 try {
     mongoose.connect("mongodb+srv://Abdurahim:abu.2006@cluster0.bphmlsu.mongodb.net/socialex?retryWrites=true&w=majority").then(() => {console.log('MongoDb has been connected')})
-    app.listen(80, () => {
-        console.log(`Server has been started on port:${80}`)
+    app.listen(8000, () => {
+        console.log(`Server has been started on port:${8000}`)
     })
 } catch (e) {
     console.error(e)
